@@ -4,7 +4,7 @@ server:
         #  SSL证书配置
 #      ssl:
 #        key-store: classpath:qweaa.pfx
-#        key-store-password: 1529638879312
+#        key-store-password: password
 #        keyStoreType: PKCS12
         # 访问根路径（项目路径），Spring boot默认是/ ，这样直接通过http://ip:port/就可以访问Controller的接口，
         #如果是需要增加一个层级，http://ip:port/path/ 的话，可配置context-path，当前项目访问
