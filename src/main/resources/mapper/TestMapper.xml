@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.js.wxd.api.mapper.TestMapper">
+
+    <update id="postTest" parameterType="java.lang.String">
+        UPDATE t_test SET
+        content=#{params}
+        WHERE id=#{id}
+    </update>
+
+    <select id="getTest" resultType="java.lang.String">
+        SELECT * FROM t_test  WHERE id=1
+    </select>
+
+    <select id="getPageTest" resultType="java.lang.String">
+        SELECT *  FROM t_test    ORDER BY id desc
+    </select>
+</mapper>

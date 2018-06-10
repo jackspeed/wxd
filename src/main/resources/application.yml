@@ -1,0 +1,54 @@
+server:
+        #访问端口
+      port: 8080
+        #  SSL证书配置
+#      ssl:
+#        key-store: classpath:qweaa.pfx
+#        key-store-password: 1529638879312
+#        keyStoreType: PKCS12
+        # 访问根路径（项目路径），Spring boot默认是/ ，这样直接通过http://ip:port/就可以访问Controller的接口，
+        #如果是需要增加一个层级，http://ip:port/path/ 的话，可配置context-path，当前项目访问
+        #路径http://ip:port/api/
+      context-path: /api
+spring:
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://111.231.89.14:3306/testDB?useSSL=false&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: ycj123456
+      initial-size: 15
+      min-idle: 1
+      max-active: 1000
+      max-wait: 15000
+      pool-prepared-statements: true
+mybatis:
+  type-aliases-package: com.js.wxd.api.entity
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
+pagehelper:
+  auto-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+logging:
+  level:
+    com:
+       js:
+          wxd:
+            api:
+                mapper: debug
+
+
