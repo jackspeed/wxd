@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 授权校验
+ * 授权校验注解
  * Created on 2017/9/17.
  */
 @Retention(RetentionPolicy.RUNTIME)
